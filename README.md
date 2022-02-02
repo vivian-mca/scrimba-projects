@@ -14,7 +14,7 @@ These are projects created through Scrimba's course, The Frontend Developer Care
 The objective of this repository is to document my progress in Scrimba. My goal is to continue improving and modifying these projects as I gain more knowledge in Web Development.
 
 ## Module 3 - Making websites interactive
-* [Passenger counter app](#)
+* [Passenger counter app](https://vivian-mca.github.io/scrimba-projects/Passenger%20counter%20app)
 * [Blackjack game](#)
 * [Chrome extension](#)
 * [My emojis](#)
