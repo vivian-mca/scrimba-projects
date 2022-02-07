@@ -15,7 +15,7 @@ The objective of this repository is to document my progress in Scrimba. My goal 
 
 ## Module 3 - Making websites interactive
 * [Passenger counter app](https://vivian-mca.github.io/scrimba-projects/Passenger%20counter%20app)
-* [Blackjack game](#)
+* [Blackjack game](https://vivian-mca.github.io/scrimba-projects/Blackjack%20game)
 * [Chrome extension](#)
 * [My emojis](#)
 
