@@ -1,0 +1,103 @@
+/* karla-800 - latin */
+@font-face {
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 800;
+  src: url('../fonts/Karla/karla-v21-latin-800.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/Karla/karla-v21-latin-800.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/Karla/karla-v21-latin-800.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/Karla/karla-v21-latin-800.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/Karla/karla-v21-latin-800.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/Karla/karla-v21-latin-800.svg#Karla') format('svg'); /* Legacy iOS */
+}
+
+/* inter-regular - latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/Inter/inter-v7-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/Inter/inter-v7-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/Inter/inter-v7-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/Inter/inter-v7-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/Inter/inter-v7-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/Inter/inter-v7-latin-regular.svg#Inter') format('svg'); /* Legacy iOS */
+}
+
+body {
+  background: #1c1c1c;
+}
+
+main {
+  background: #1f2937;
+  height: 550px;
+  margin: 62px auto;
+  width: 550px;
+  border: 1px #1f2937 solid;
+}
+
+h1 {
+  color: #fff;
+  font-family: 'Karla','Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 40px;
+  letter-spacing: -0.025em;
+  line-height: 100%;
+  margin: 118px 0 10px 52px;
+}
+
+p {
+  color: #d5d4d8;
+  font-family: 'Inter', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 20px;
+  line-height: 140%;
+  margin: 0 0 51px 52px;
+}
+
+button {
+  background: #10b981;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
+  color: #fff;
+  font-family: 'Inter', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  height: 42px;
+  margin-left: 52px;
+  outline: none;
+  width: 223px;
+}
+
+hr {
+  border: 1px solid #2f3e53;
+  height: 0px;
+  margin: 35px auto;
+  width: 446px;
+}
+
+.text-emphasis {
+  color: #55f991;
+}
+
+.btn-icon {
+  height: 18px;
+  width: 14px;
+  margin-right: 15px;
+}
+
+.container {
+  background: #273549;
+  border-radius: 6px;
+  margin-top: 0px;
+  margin-left: 52px;
+  height: 39px;
+  width: 211px;
+}
+
+.unpopulated-icon {
+  background: #202B3C;
+  height: 5px;
+  width: 20px;
+  margin: 0 auto;
+}
