@@ -27,7 +27,6 @@ html {
 
 body {
   background-color: var(--color-bg-container);
-  padding: 6rem 3.9rem 6.3rem;
   font-family: "Inter", sans-serif;
   font-weight: 500;
   font-size: 1.6rem;
@@ -35,7 +34,9 @@ body {
 
 main {
   max-width: 550px;
+  max-height: 550px;
   margin: 0 auto;
+  padding: 6rem 3.9rem 6.3rem;
 }
 
 /*------------------------------------*\
@@ -70,7 +71,6 @@ button {
   display: block;
   width: 223px;
   height: 42px;
-  margin: 0 auto;
   padding: 9px 17px 9px 15px;
   border: none;
   border-radius: 6px;
@@ -93,7 +93,7 @@ button {
 \*------------------------------------*/
 
 hr {
-  margin: 3.5rem 0 2.7rem;
+  margin: 3.5rem 0;
   border: 0;
   height: 0.1rem;
   background: var(--color-horizontal-rule);
@@ -105,7 +105,7 @@ hr {
 
 .pw-container {
   padding: 0;
-  margin-bottom: 6rem;
+  margin-bottom: 4.6rem;
 }
 
 .pw-container * + * {
@@ -113,19 +113,34 @@ hr {
 }
 
 .pw-container li {
-  width: 297px;
-  height: 39px;
+  width: 29.7rem;
+  height: 3.9rem;
   border-radius: 6px;
-  background: var(--color-bg-pw-container);
+  background: var(--color-bg-pw-container) url("../icons/Icon-ellipsis.svg")
+    no-repeat center;
   list-style: none;
 }
 
-.pw {
-  padding: 1.7rem 0;
-}
+@media only screen and (min-width: 640px) {
+  body {
+    background-color: var(--color-bg);
+  }
 
-.pw-container-icon {
-  display: block;
-  width: 20px;
-  margin: 0 auto;
+  main {
+    margin-top: 6.4rem;
+    padding: 11.8rem 5.2rem 4.9rem;
+    background-color: var(--color-bg-container);
+  }
+
+  .pw-container {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    place-content: center;
+    gap: 2.4rem 2.7rem;
+  }
+
+  .pw-container li {
+    width: 21.1rem;
+    margin: 0;
+  }
 }
