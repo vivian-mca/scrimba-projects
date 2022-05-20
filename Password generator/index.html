@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Password Generator | Scrimba solo project</title>
+    <title>Password Generator | Scrimba Solo Project</title>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,37 +13,63 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Karla:wght@800&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/regular.min.js"
+    />
   </head>
 
-  <body>
-    <main>
-      <header>
-        <h1>
+  <body class="[ dark-theme ] [ bg-clr ]">
+    <main class="[ flow ] [ margin-inline-39 ]">
+      <!-- Header -->
+      <hgroup>
+        <h1 class="main-text-clr">
           Generate a <br /><span class="text-emphasis">random password</span>
         </h1>
-        <p>Never use an insecure password again.</p>
-      </header>
+        <h2 class="[ subheader ] [ flow-exception-11px ] [ lh-500 text-clr ]">
+          Never use an insecure password again.
+        </h2>
+      </hgroup>
 
-      <button id="generate-pw-btn" onclick="">
+      <!-- Range slider -->
+      <form>
+        <div class="fs-300 lh-500">
+          <label for="pw-length" class="text-clr">Password length: </label>
+          <output for="pw-length" class="fw-700 text-emphasis" id="pw-value"
+            >16</output
+          >
+        </div>
+        <input
+          type="range"
+          name="pw-length"
+          id="pw-length"
+          class="[ slider ] [ flow-exception-4px ]"
+          min="8"
+          max="24"
+          value="16"
+        />
+      </form>
+
+      <!-- "Generate Passwords" button -->
+      <button class="[ flex-row ] [ fw-500 ]" id="btn--generate-pw" onclick="">
         <img
-          class="btn-icon"
+          class="[ btn__icon ] [ margin-right-12 align-middle ]"
           src="icons/icon-lightning-bolt.svg"
           alt=""
         />Generate passwords
       </button>
 
-      <hr />
+      <hr class="hr-clr" />
 
-      <section>
-        <ul class="pw-container">
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
-      </section>
+      <!-- Password list -->
+      <ul class="pw-container">
+        <li id="pw-1"></li>
+        <li id="pw-2"></li>
+        <li id="pw-3"></li>
+        <li id="pw-4"></li>
+      </ul>
+
     </main>
-
     <script src="index.js"></script>
   </body>
 </html>

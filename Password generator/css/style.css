@@ -1,146 +1,315 @@
 /*------------------------------------*\
-  #BASE-STYLES
+  #GLOBAL-STYLES
 \*------------------------------------*/
 
+/* 1. change names of clr variables, 2. make pw and output flush to edges */
+
 :root {
-  --color-header-primary: #fff;
-  --color-header-emphasis: #4adf86;
-  --color-header-secondary: #d5d4d8;
-  --color-button: #10b981;
-  --color-text-primary: #55f991;
-  --color-bg: #1c1c1c;
-  --color-bg-container: #1f2937;
-  --color-bg-pw-container: #273549;
-  --color-horizontal-rule: #2f3e53;
+  --clr-bg-dark: hsl(215, 28%, 17%);
+  --clr-bg-light: hsl(152, 81%, 96%);
+
+  --clr-primary-400: hsl(160, 84%, 39%);
+  --clr-primary-300: hsl(144, 70%, 58%);
+  --clr-primary-200: hsl(142, 93%, 65%);
+  --clr-primary-100: hsl(142, 82%, 65%);
+
+  --clr-neutral-light-300: hsl(255, 5%, 84%);
+  --clr-neutral-light-200: hsl(255, 5%, 90%);
+  --clr-neutral-light-100: hsl(0, 0%, 100%);
+
+  --clr-neutral-dark-600: hsl(250, 18%, 19%);
+  --clr-neutral-dark-500: hsl(215, 30%, 18%);
+  --clr-neutral-dark-400: hsl(215, 30%, 22%);
+  --clr-neutral-dark-300: hsl(215, 28%, 25%);
+  --clr-neutral-dark-200: hsl(215, 26%, 33%);
+  --clr-neutral-dark-100: hsl(220, 9%, 46%);
+
+  --ff-title: "Karla", sans-serif;
+  --ff-body: "Inter", sans-serif;
+
+  --fs-800: 4rem;
+  --fs-500: 2rem;
+  --fs-400: 1.6rem;
+  --fs-300: 1.5rem;
+
+  --lh-600: 2;
+  --lh-500: 1.75;
 }
 
-html {
-  box-sizing: border-box;
-  font-size: 62.5%; /* equivalent to 10px*/
+.dark-theme {
+  --bg: var(--clr-bg-dark);
+  --main-text-clr: var(--clr-neutral-light-100);
+  --text-emphasis: var(--clr-primary-300);
+  --text-clr: var(--clr-neutral-light-300);
+  --btn-clr: var(--clr-primary-400);
+  --hr-clr: var(--clr-neutral-dark-300);
+  --pw-container-clr: var(--clr-neutral-dark-400);
+  --pw-text-clr: var(--clr-primary-200);
+  --unpopulated-icon: url("../icons/Icon-ellipsis-dark.svg");
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
+.light-theme {
+  --bg: var(--clr-bg-light);
+  --main-text-clr: var(--clr-neutral-dark-600);
+  --text-emphasis: var(--clr-primary-400);
+  --text-clr: var(--clr-neutral-dark-100);
+  --btn-clr: var(--clr-primary-400);
+  --hr-clr: var(--clr-neutral-light-300);
+  --pw-container-clr: var(--clr-neutral-dark-400);
+  --pw-text-clr: var(--clr-primary-100);
+  --unpopulated-icon: url("../icons/Icon-ellipsis-light.svg");
 }
 
 body {
-  background-color: var(--color-bg-container);
-  font-family: "Inter", sans-serif;
-  font-weight: 500;
-  font-size: 1.6rem;
-}
+  display: grid;
+  place-items: center;
 
-main {
-  max-width: 550px;
-  max-height: 550px;
-  margin: 0 auto;
-  padding: 6rem 3.9rem 6.3rem;
+  font-family: var(--ff-body);
+  font-size: var(--fs-400);
 }
-
-/*------------------------------------*\
-  #HEADER
-\*------------------------------------*/
 
 h1 {
-  margin: 0 0 1rem 0;
-  font-family: "Karla", sans-serif;
-  font-size: 4rem;
+  font-family: var(--ff-title);
+  font-size: var(--fs-800);
   font-weight: 800;
-  color: var(--color-header-primary);
+  letter-spacing: -0.025em;
   line-height: 1;
-  letter-spacing: -2.5%;
 }
 
-.text-emphasis {
-  color: var(--color-header-emphasis);
-}
-
-header p {
-  margin-bottom: 4.5rem;
-  color: var(--color-header-secondary);
+h2 {
+  font-size: var(--fs-400);
   font-weight: 400;
 }
 
+hr {
+  height: 1px;
+  margin: 0;
+  border: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
 /*------------------------------------*\
-  #BUTTON
+  COMPOSITION
 \*------------------------------------*/
 
-button {
-  display: block;
-  width: 223px;
-  height: 42px;
-  padding: 9px 17px 9px 15px;
-  border: none;
-  border-radius: 6px;
-  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
-  background-color: var(--color-button);
-  color: var(--color-header-primary);
-  line-height: 1.5;
+.flow * + * {
+  margin-block-start: var(--space, 2.8rem);
+}
+
+.flow-exception-11px {
+  --space: 1.1rem;
+}
+
+.flow-exception-4px {
+  --space: 0.4rem;
+}
+
+/*------------------------------------*\
+  UTILITY
+\*------------------------------------*/
+
+.margin-inline-39 {
+  margin-inline: 3.9rem;
+}
+
+.margin-right-12 {
+  margin-right: 1.2rem;
+}
+
+.fs-300 {
+  font-size: var(--fs-300);
+}
+
+.fw-500 {
+  font-weight: 500;
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+
+.lh-500 {
+  line-height: var(--lh-500);
+}
+
+.lh-600 {
+  line-height: var(--lh-600);
+}
+
+.align-middle {
+  display: inline-block;
+  vertical-align: sub;
+}
+
+.bg-clr {
+  background: var(--bg);
+}
+
+.main-text-clr {
+  color: var(--main-text-clr);
+}
+
+.text-emphasis {
+  color: var(--text-emphasis);
+}
+
+.text-clr {
+  color: var(--text-clr);
+}
+
+.btn-clr {
+  background: var(--btn-clr);
+}
+
+.btn-text-clr {
+  color: var(--btn-text-color);
+}
+
+.hr-clr {
+  background: var(--hr-clr);
+}
+
+.pw-container-clr {
+  background: var(--pw-container-clr);
+}
+
+.pw-text-clr {
+  color: var(--pw-text-clr);
+}
+
+/*------------------------------------*\
+  BLOCK
+\*------------------------------------*/
+
+.slider[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 12px;
+  margin: 0;
+  border-radius: 10px;
+  outline: none;
+  background: var(--clr-neutral-light-200);
+  opacity: 0.8;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+.slider[type="range"]:hover {
+  opacity: 1;
+}
+
+/* Chrome & Safari */
+.slider[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--clr-primary-400);
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  -webkit-transition: background 0.15s ease-in-out;
+  transition: background 0.15s ease-in-out;
+}
+
+.slider[type="range"]::-webkit-slider-thumb:hover {
+  background: var(--clr-primary-300);
+}
+
+/* Firefox */
+.slider[type="range"]::-moz-slider-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--clr-primary-400);
+  box-shadow: 0 0px 3px rgba(0, 0, 0, 0.4);
   cursor: pointer;
 }
 
-.btn-icon {
-  width: 20px;
-  height: 20px;
-  margin-right: 1.2rem;
-  vertical-align: middle;
+.slider[type="range"]::-moz-slider-thumb:hover {
+  background: var(--clr-primary-300);
 }
 
-/*------------------------------------*\
-  #HORIZONTAL-RULE
-\*------------------------------------*/
-
-hr {
-  margin: 3.5rem 0;
-  border: 0;
-  height: 0.1rem;
-  background: var(--color-horizontal-rule);
+/* Microsoft Edge */
+.slider[type="range"]::-ms-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--clr-primary-400);
+  box-shadow: 0 0px 3px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
 }
 
-/*------------------------------------*\
-  #PASSWORD-LIST
-\*------------------------------------*/
+.slider[type="range"]::-ms-slider-thumb:hover {
+  background: var(--clr-primary-300);
+}
+
+button {
+  padding: 0.9rem 1.7rem 0.9rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  background: var(--clr-primary-400);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+  color: var(--clr-neutral-light-100);
+  cursor: pointer;
+}
+
+button:hover,
+button:focus {
+  background: var(--clr-primary-300);
+}
 
 .pw-container {
-  padding: 0;
-  margin-bottom: 4.6rem;
-}
-
-.pw-container * + * {
-  margin-top: 2.7rem;
+  color: var(--pw-text-clr);
+  line-height: var(--lh-600);
 }
 
 .pw-container li {
-  width: 29.7rem;
   height: 3.9rem;
+  padding: 0.4rem 2.8rem;
   border-radius: 6px;
-  background: var(--color-bg-pw-container) url("../icons/Icon-ellipsis.svg")
-    no-repeat center;
-  list-style: none;
+  background: var(--pw-container-clr) var(--unpopulated-icon) no-repeat center;
+  text-align: center;
+  list-style-type: none;
 }
 
-@media only screen and (min-width: 640px) {
+/*------------------------------------*\
+  MEDIA-QUERY
+\*------------------------------------*/
+
+@media (min-width: 768px) {
   body {
-    background-color: var(--color-bg);
+    display: block;
   }
 
   main {
-    margin-top: 6.4rem;
-    padding: 11.8rem 5.2rem 4.9rem;
-    background-color: var(--color-bg-container);
+    width: 550px;
+    margin-block-start: 11.8rem;
+  }
+
+  .margin-inline-39 {
+    margin-inline: auto;
+  }
+
+  .subheader {
+    font-size: var(--fs-500);
+  }
+
+  .slider[type="range"] {
+    width: 35rem;
   }
 
   .pw-container {
     display: grid;
-    grid-template-columns: repeat(2, auto);
-    place-content: center;
-    gap: 2.4rem 2.7rem;
+    grid-template: repeat(2, auto) / repeat(2, auto);
+    gap: 2.8rem 2.4rem;
   }
 
   .pw-container li {
-    width: 21.1rem;
+    align-self: center;
     margin: 0;
   }
 }
