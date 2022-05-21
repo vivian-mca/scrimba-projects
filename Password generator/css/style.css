@@ -2,8 +2,6 @@
   #GLOBAL-STYLES
 \*------------------------------------*/
 
-/* 1. change names of clr variables, 2. make pw and output flush to edges */
-
 :root {
   --clr-bg-dark: hsl(215, 28%, 17%);
   --clr-bg-light: hsl(152, 81%, 96%);
@@ -31,6 +29,7 @@
   --fs-500: 2rem;
   --fs-400: 1.6rem;
   --fs-300: 1.5rem;
+  --fs-200: 1.4rem;
 
   --lh-600: 2;
   --lh-500: 1.75;
@@ -305,10 +304,12 @@ button:hover {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2.8rem 2.4rem;
+    font-size: var(--fs-200);
   }
 
   .pw-container li {
     align-self: center;
     margin: 0;
+    white-space: nowrap;
   }
 }

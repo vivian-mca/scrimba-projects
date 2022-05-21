@@ -1,5 +1,6 @@
 // <-- Themes -->
 
+
 // <--- Slider --->
 const slider = document.getElementById("pw-length"); // range slider
 const output = document.querySelector("output"); // text which displays the value of the range slider
@@ -9,6 +10,7 @@ output.value = slider.value; // displays default slider value
 slider.addEventListener("input", function () {
   output.value = this.value;
 });
+
 
 // <-- Password generator -->
 const button = document.querySelector("button");
@@ -24,7 +26,7 @@ const charSet = upperCase + lowerCase + nums + symbols;
 const generatePassword = () => {
   let password = "";
   const pwLength = output.value;
-  
+
   for (let i = 0; i < pwLength; i++) {
     const randomIndex = Math.floor(Math.random() * charSet.length); // generates random index number
     password += charSet[randomIndex]; // adds random char to password
@@ -38,3 +40,6 @@ button.addEventListener("click", function () {
     password.textContent = generatePassword();
   });
 });
+
+
+// <-- Clipboard -->
