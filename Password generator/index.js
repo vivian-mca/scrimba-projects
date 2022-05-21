@@ -1,6 +1,5 @@
 // <-- Themes -->
 
-
 // <--- Slider --->
 const slider = document.getElementById("pw-length"); // range slider
 const output = document.querySelector("output"); // text which displays the value of the range slider
@@ -10,7 +9,6 @@ output.value = slider.value; // displays default slider value
 slider.addEventListener("input", function () {
   output.value = this.value;
 });
-
 
 // <-- Password generator -->
 const button = document.querySelector("button");
@@ -38,8 +36,31 @@ const generatePassword = () => {
 button.addEventListener("click", function () {
   [...passwords].forEach((password) => {
     password.textContent = generatePassword();
+    password.classList.add("active"); // adds class="active" to indicate password list is populated
   });
 });
 
-
 // <-- Clipboard -->
+const copyPassword = (event) => {
+  // Prevents event from firing if password list is unpopulated
+  if (!event.target.classList.contains("active")) {
+    return false;
+  }
+
+  // Copies password to clipboard
+  const password = event.target.textContent;
+  navigator.clipboard.writeText(password);
+
+  // Displays "Copied!"
+  const copyDiv = document.createElement("div");
+  copyDiv.classList.add("copy");
+  copyDiv.textContent = "Copied!";
+  event.target.append(copyDiv);
+  setTimeout(() => {
+    copyDiv.parentNode.removeChild(copyDiv);
+  }, 500);
+};
+
+[...passwords].forEach((password) => {
+  password.addEventListener("click", copyPassword);
+});

@@ -187,7 +187,7 @@ ul {
 .slider[type="range"] {
   -webkit-appearance: none;
   width: 100%;
-  height: 12px;
+  height: 7px;
   margin: 0;
   border-radius: 10px;
   outline: none;
@@ -272,6 +272,15 @@ button:hover {
   background: var(--pw-container-clr) var(--unpopulated-icon) no-repeat center;
   text-align: center;
   list-style-type: none;
+  cursor: pointer;
+}
+
+.copy {
+  position: relative;
+  right: 50%;
+  bottom: 190%;
+  font-size: var(--fs-200);
+  color: var(--text-clr);
 }
 
 /*------------------------------------*\
