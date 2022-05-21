@@ -257,8 +257,7 @@ button {
   cursor: pointer;
 }
 
-button:hover,
-button:focus {
+button:hover {
   background: var(--clr-primary-300);
 }
 
@@ -304,7 +303,7 @@ button:focus {
 
   .pw-container {
     display: grid;
-    grid-template: repeat(2, auto) / repeat(2, auto);
+    grid-template-columns: repeat(2, 1fr);
     gap: 2.8rem 2.4rem;
   }
 
