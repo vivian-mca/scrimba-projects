@@ -15,8 +15,26 @@
     />
   </head>
 
-  <body class="[ light-theme ] [ bg-clr ]">
+  <body class="bg-clr">
     <main class="[ flow ] [ margin-inline-39 ]">
+      <!-- Toggle color mode-->
+      <header class="flex-end">
+        <div class="toggle-switch">
+          <div class="toggle-switch__slider"></div>
+          <img
+            src="icons/icon-sun.svg"
+            alt=""
+            class="[ icon-sun light--hidden ] [ wh-15x15 position-left ]"
+          />
+          <img
+            src="icons/icon-moon.svg"
+            alt=""
+            class="[ icon-moon dark--hidden ] [ wh-12x12 position-right ]"
+          />
+        </div>
+        <!-- end .switch -->
+      </header>
+
       <!-- Header -->
       <hgroup>
         <h1 class="main-text-clr">
@@ -45,8 +63,13 @@
       </form>
 
       <!-- "Generate Passwords" button -->
-      <button class="[ flex-row ] [ fw-500 ]" id="btn--generate-pw" onclick="">
+      <button
+        data-type="primary"
+        class="[ flex-row ] [ fw-500 ]"
+        id="action-btn"
+      >
         <img
+          aria-hidden="true"
           class="[ btn__icon ] [ margin-right-12 align-middle ]"
           src="icons/icon-lightning-bolt.svg"
           alt=""
@@ -63,6 +86,7 @@
         <li class="pw"></li>
       </ul>
     </main>
+
     <script src="index.js"></script>
   </body>
 </html>

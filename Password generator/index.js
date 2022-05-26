@@ -1,6 +1,11 @@
-// <-- Themes -->
+// <-- Toggle dark or light mode -->
+const toggleSwitch = document.querySelector(".toggle-switch");
 
-// <--- Slider --->
+toggleSwitch.addEventListener("click", function () {
+  document.body.classList.toggle("dark-mode");
+});
+
+// <--- Password length slider --->
 const slider = document.getElementById("pw-length"); // range slider
 const output = document.querySelector("output"); // text which displays the value of the range slider
 output.value = slider.value; // displays default slider value
@@ -11,7 +16,7 @@ slider.addEventListener("input", function () {
 });
 
 // <-- Password generator -->
-const button = document.querySelector("button");
+const button = document.getElementById("action-btn");
 const passwords = document.getElementsByClassName("pw");
 
 const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
