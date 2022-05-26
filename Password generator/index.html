@@ -19,17 +19,19 @@
     <main class="[ flow ] [ margin-inline-39 ]">
       <!-- Toggle color mode-->
       <header class="flex-end">
-        <div class="toggle-switch">
+        <div class="toggle-switch" aria-label="Switch to dark or light mode">
           <div class="toggle-switch__slider"></div>
           <img
             src="icons/icon-sun.svg"
             alt=""
             class="[ icon-sun light--hidden ] [ wh-15x15 position-left ]"
+            aria-hidden="true"
           />
           <img
             src="icons/icon-moon.svg"
             alt=""
             class="[ icon-moon dark--hidden ] [ wh-12x12 position-right ]"
+            aria-hidden="true"
           />
         </div>
         <!-- end .switch -->
@@ -49,7 +51,13 @@
       <form>
         <div class="fs-300 lh-500">
           <label for="pw-length" class="text-clr">Password length: </label>
-          <output for="pw-length" class="fw-700 text-emphasis">16</output>
+          <output
+            for="pw-length"
+            class="fw-700 text-emphasis"
+            id="pw-length-value"
+            aria-labelledby="pw-length pw-length-value"
+            >16</output
+          >
         </div>
         <input
           type="range"
@@ -69,10 +77,10 @@
         id="action-btn"
       >
         <img
-          aria-hidden="true"
-          class="[ btn__icon ] [ margin-right-12 align-middle ]"
           src="icons/icon-lightning-bolt.svg"
           alt=""
+          class="[ btn__icon ] [ margin-right-12 align-middle ]"
+          aria-hidden="true"
         />Generate passwords
       </button>
 
