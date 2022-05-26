@@ -29,7 +29,6 @@ toggleSwitch.addEventListener("click", function () {
   localStorage.setItem("theme", theme);
 });
 
-
 // <--- Password length slider --->
 const slider = document.getElementById("pw-length"); // range slider
 const output = document.querySelector("output"); // text which displays the value of the range slider
@@ -39,7 +38,6 @@ output.value = slider.value; // displays default slider value
 slider.addEventListener("input", function () {
   output.value = this.value;
 });
-
 
 // <-- Password generator -->
 const button = document.getElementById("action-btn");
@@ -70,7 +68,6 @@ button.addEventListener("click", function () {
     password.classList.add("active"); // adds class="active" to indicate password list is populated
   });
 });
-
 
 // <-- Clipboard -->
 const copyPassword = (event) => {
