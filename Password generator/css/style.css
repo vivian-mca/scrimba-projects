@@ -60,7 +60,7 @@
   --unpopulated-icon: url("../icons/Icon-ellipsis-dark.svg");
 }
 
-/* Hides sun icon during light mode */
+/* Hides sun during light mode */
 .light--hidden {
   display: none;
 }
@@ -74,6 +74,50 @@
 /* Reveals sun icon during dark mode */
 .dark-mode .light--hidden {
   display: block;
+}
+
+/* Styles for users who prefer dark mode at the OS level */
+@media (prefers-color-scheme: dark) {
+  /* Defaults to dark mode */
+  body {
+    --bg: var(--clr-bg-dark);
+    --main-text-clr: var(--clr-neutral-light-100);
+    --text-emphasis: var(--clr-primary-300);
+    --text-clr: var(--clr-neutral-light-300);
+    --btn-clr: var(--clr-primary-400);
+    --hr-clr: var(--clr-neutral-dark-300);
+    --pw-container-clr: var(--clr-neutral-dark-400);
+    --pw-text-clr: var(--clr-primary-200);
+    --switch-bg: var(--clr-neutral-dark-200);
+    --unpopulated-icon: url("../icons/Icon-ellipsis-dark.svg");
+  }
+
+  /* Overrides dark mode with light mode styles if the user decides to swap */
+  body.light-mode {
+    --bg: var(--clr-bg-light);
+    --main-text-clr: var(--clr-neutral-dark-600);
+    --text-emphasis: var(--clr-primary-400);
+    --text-clr: var(--clr-neutral-dark-100);
+    --btn-clr: var(--clr-primary-400);
+    --hr-clr: var(--clr-neutral-light-300);
+    --pw-container-clr: var(--clr-neutral-dark-400);
+    --pw-text-clr: var(--clr-primary-100);
+    --switch-bg: var(--clr-bg-dark);
+    --unpopulated-icon: url("../icons/Icon-ellipsis-light.svg");
+  }
+
+  .toggle-switch__slider {
+    transform: translateX(20px);
+  }
+
+  .light-mode .toggle-switch__slider {
+    transform: none;
+  }
+
+  /* Reveals sun icon during dark mode */
+  .light--hidden {
+    display: block;
+  }
 }
 
 body {

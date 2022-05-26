@@ -1,9 +1,34 @@
 // <-- Toggle dark or light mode -->
 const toggleSwitch = document.querySelector(".toggle-switch");
+const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+const currentTheme = localStorage.getItem("theme");
 
-toggleSwitch.addEventListener("click", function () {
+// Checks user's theme preference from local storage and toggles color mode according to preference
+if (currentTheme === "dark") {
   document.body.classList.toggle("dark-mode");
+} else if (currentTheme === "light") {
+  document.body.classList.toggle("light-mode");
+}
+
+// Automatically loads a dark or light theme based on user's system color scheme preference
+// Allows user to manually override their system preference
+toggleSwitch.addEventListener("click", function () {
+  if (prefersDarkScheme.matches) {
+    document.body.classList.toggle("light-mode");
+    let theme = document.body.classList.contains("light-mode")
+      ? "light"
+      : "dark";
+  } else {
+    document.body.classList.toggle("dark-mode");
+    let theme = document.body.classList.contains("dark-mode")
+      ? "dark"
+      : "light";
+  }
+
+  // Saves current preference to localStorage
+  localStorage.setItem("theme", theme);
 });
+
 
 // <--- Password length slider --->
 const slider = document.getElementById("pw-length"); // range slider
@@ -14,6 +39,7 @@ output.value = slider.value; // displays default slider value
 slider.addEventListener("input", function () {
   output.value = this.value;
 });
+
 
 // <-- Password generator -->
 const button = document.getElementById("action-btn");
@@ -44,6 +70,7 @@ button.addEventListener("click", function () {
     password.classList.add("active"); // adds class="active" to indicate password list is populated
   });
 });
+
 
 // <-- Clipboard -->
 const copyPassword = (event) => {
