@@ -1,0 +1,103 @@
+/*------------------------------------*\
+  #GLOBAL-STYLES
+\*------------------------------------*/
+
+:root {
+  --color-primary: hsl(193, 95%, 68%);
+  --color-neutral-100: hsl(0, 0%, 100%);
+  --color-neutral-700: hsl(217, 14%, 18%);
+  --color-neutral-800: hsl(233, 12%, 15%);
+  --ff: "Inter", sans-serif;
+
+  --26px: calc(26rem / 16);
+  --27px: calc(27rem / 16);
+  --31px: calc(31rem / 16);
+}
+
+body {
+  background: var(--color-neutral-700);
+  font-family: var(--ff);
+  font-weight: 400;
+  line-height: 1.21;
+}
+
+h1,
+h2 {
+  letter-spacing: -0.05em;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/*------------------------------------*\
+  #COMPOSITION
+\*------------------------------------*/
+
+.flow > * + * {
+  margin-block-start: calc(46rem / 16);
+}
+
+.list-flow > * + * {
+  margin-block-start: calc(19rem / 16);
+}
+
+/*------------------------------------*\
+  #UTILITY
+\*------------------------------------*/
+.align-right {
+  margin-inline-start: auto;
+}
+
+.padding-top-57px {
+  padding-block-start: calc(57rem / 16);
+}
+
+.padding-left-7px {
+  padding-inline-start: calc(7rem / 16);
+}
+
+.padding-left-27px {
+  padding-inline-start: calc(27rem / 16);
+}
+
+.padding-left-47px {
+  padding-inline-start: calc(47rem / 16);
+}
+
+.bg-neutral-800 {
+  background-color: var(--color-neutral-800);
+}
+
+.bg-icon {
+  background: url("../images/icon-bg-react.png") right 80% no-repeat;
+}
+
+.color-primary {
+  color: var(--color-primary);
+}
+
+.color-neutral-100 {
+  color: var(--color-neutral-100);
+}
+
+.fs-22-25px {
+  font-size: calc(22.25rem / 16);
+}
+
+/*------------------------------------*\
+  #BLOCK
+\*------------------------------------*/
+
+nav {
+  display: flex;
+  align-items: center;
+  padding: var(--31px) var(--27px) var(--31px) var(--26px);
+  background: var(--color-neutral-800);
+}
+
+li::marker {
+  color: var(--color-primary);
+  font-size: 1.6em;
+}
