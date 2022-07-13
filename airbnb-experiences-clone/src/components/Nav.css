@@ -1,0 +1,7 @@
+@import "../assets/css/config.css";
+@import "../assets/css/utilities.css";
+
+nav {
+  padding: var(--22px) var(--30px);
+  box-shadow: 0px 2.98px 7.46px rgba(0, 0, 0, 0.1);
+}

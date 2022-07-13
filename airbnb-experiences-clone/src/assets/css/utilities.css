@@ -1,0 +1,24 @@
+@import "./config.css";
+
+/* ======= SIZE ======= */
+.width-67 { width: 67%; }
+
+/* ======= MARGIN ======= */
+.margin-right-100 { margin-inline-end: calc(2rem / 16); }
+
+/* ======= BORDER RADIUS ======= */
+.br-small { border-radius: calc(2rem / 16); }
+.br-med { border-radius: calc(9rem / 16); }
+
+/* ======= COLORS ======= */
+.bg-neutral-100 { background: var(--color-neutral-100); }
+.color-neutral-300 { color: var(--color-neutral-300); }
+.color-neutral-400 { color: var(--color-neutral-400); }
+.color-neutral-800 { color: var(--color-neutral-800); }
+
+/* ======= FONT ======= */
+.font-size-200 { font-size: var(--font-size-200); }
+.font-size-300 { font-size: var(--font-size-300); }
+.font-size-500 { font-size: var(--font-size-500); }
+
+.weight-bold { font-weight: var(--weight-bold); }

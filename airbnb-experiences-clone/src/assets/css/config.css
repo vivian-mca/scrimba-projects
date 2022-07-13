@@ -1,0 +1,28 @@
+:root {
+  /* ======= COLORS ======= */
+  --color-neutral-100: hsl(0, 0%, 100%);
+  --color-neutral-300: hsl(254, 6%, 58%);
+  --color-neutral-400: hsl(0, 0%, 13%);
+  --color-neutral-800: hsl(0, 0%, 0%);
+
+  /* ======= SPACING ======= */
+  --5px: calc(5rem / 16);
+  --6px: calc(6rem / 16);
+  --8px: calc(8rem / 16);
+  --9px: calc(9rem / 16);
+  --22px: calc(22rem / 16);
+  --26px: calc(26rem / 16);
+  --30px: calc(30rem / 16);
+  --32px: calc(32rem / 16);
+  --36px: calc(36rem / 16);
+
+  /* ======= FONTS ======= */
+  --weight-bold: 600;
+  --weight-light: 300;
+
+  --font-family: 'Poppins', sans-serif;
+
+  --font-size-200: calc(10.24rem / 16);
+  --font-size-300: calc(12rem / 16);
+  --font-size-500: calc(36rem / 16);
+}

@@ -1,0 +1,12 @@
+@import "../assets/css/config.css";
+@import "../assets/css/composition.css";
+@import "../assets/css/utilities.css";
+
+.hero {
+  padding: var(--26px) var(--36px);
+}
+
+.hero__image {
+  max-width: 83%;
+  margin: auto;
+}

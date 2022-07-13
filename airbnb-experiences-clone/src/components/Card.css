@@ -1,0 +1,23 @@
+@import "../assets/css/config.css";
+@import "../assets/css/composition.css";
+@import "../assets/css/utilities.css";
+
+.card {
+  position: relative;
+  width: calc(176rem / 16);
+}
+
+.card__rating-star {
+  display: inline-block;
+  width: calc(14em / 16);
+  height: calc(14em / 16);
+}
+
+.card__status {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  margin: 0;
+  padding: var(--5px) var(--6px);
+}
+

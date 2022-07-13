@@ -1,0 +1,17 @@
+@import './config.css';
+
+.flow > * + * {
+  margin-block-start: var(--space, 1rem);
+}
+
+.flow-exception {
+  --space: var(--32px);
+}
+
+.card-flow > * + * {
+  margin-block-start: var(--space, var(--8px));
+}
+
+.card-flow-exception {
+  --space: var(--9px);
+}
